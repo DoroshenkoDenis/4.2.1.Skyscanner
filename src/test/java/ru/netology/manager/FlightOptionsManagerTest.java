@@ -36,7 +36,7 @@ class FlightOptionsManagerTest {
 
     @Test
     void shouldFindAllAndSortByPrice() {
-        FlightOption[] expected = new FlightOption[]{option11, option111, option1};
+        FlightOption[] expected = new FlightOption[]{option11, option1111, option111, option1};
         FlightOption[] actual = manager.findAllAndSortPrise("DME", "KHV");
         assertArrayEquals(expected, actual);
     }
@@ -60,10 +60,8 @@ class FlightOptionsManagerTest {
         FlightOption[] expected = new FlightOption[]{option1111, option1, option111, option11};
         FlightOption[] actual = manager.findAllAndSortByTimeAndPrise("DME", "KHV", time);
         assertArrayEquals(expected, actual);
-
 //        for (FlightOption flightOption : actual){
 //            System.out.println(flightOption);
 //        }
     }
-
 }

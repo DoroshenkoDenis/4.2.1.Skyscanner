@@ -30,6 +30,7 @@ public class FlightOptionManager {
         Arrays.sort(result);
         return result;
     }
+
     public FlightOption[] findAllAndSortByTimeAndPrise(String airportFrom, String airportTo, Comparator<FlightOption> TravelTime) {
         FlightOption[] result = new FlightOption[0];
         for (FlightOption option : repository.findAll()) {
